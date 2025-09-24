@@ -1,0 +1,1484 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>OSocialCare - Professional Social Media Marketing Services</title>
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.bunny.net">
+        <link href="https://fonts.bunny.net/css?family=inter:400,500,600,700,800" rel="stylesheet" />
+
+        <style>
+            /* ===========================================
+               DARK MODE SMM SERVICES PLATFORM
+               =========================================== */
+            
+            /* CSS Custom Properties - Dark Theme */
+            :root {
+                /* Primary Colors - Orange Theme */
+                --primary-color: #f97316;
+                --primary-hover: #ea580c;
+                --primary-light: #fb923c;
+                --primary-dark: #c2410c;
+                
+                /* Accent Colors */
+                --accent-color: #fbbf24;
+                --accent-secondary: #f59e0b;
+                --success-color: #10b981;
+                --error-color: #ef4444;
+                
+                /* Dark Theme Text Colors */
+                --text-primary: #f9fafb;
+                --text-secondary: #d1d5db;
+                --text-muted: #9ca3af;
+                --text-accent: #fbbf24;
+                
+                /* Dark Theme Backgrounds */
+                --bg-primary: #0f0f23;
+                --bg-secondary: #1a1a2e;
+                --bg-tertiary: #16213e;
+                --bg-card: #16213e;
+                --bg-glass: rgba(26, 26, 46, 0.8);
+                --border-color: #374151;
+                --border-light: #4b5563;
+                
+                /* Shadows */
+                --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+                --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.3);
+                --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.5), 0 4px 6px -4px rgb(0 0 0 / 0.4);
+                --shadow-glow: 0 0 20px rgb(249 115 22 / 0.4);
+                --shadow-orange: 0 0 30px rgb(249 115 22 / 0.3);
+                
+                /* Border Radius */
+                --radius-sm: 0.375rem;
+                --radius-md: 0.5rem;
+                --radius-lg: 0.75rem;
+                --radius-xl: 1rem;
+                --radius-2xl: 1.5rem;
+            }
+            
+            /* Force dark mode and prevent zooming */
+            html {
+                -webkit-text-size-adjust: 100%;
+                -ms-text-size-adjust: 100%;
+                text-size-adjust: 100%;
+                touch-action: manipulation;
+                background-color: var(--bg-primary);
+                color-scheme: dark only;
+                scroll-behavior: smooth;
+            }
+            
+            /* Base styles */
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            
+            body {
+                font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%) !important;
+                min-height: 100vh;
+                color: var(--text-primary) !important;
+                overflow-x: hidden;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                line-height: 1.6;
+            }
+            
+            /* Force dark mode on all elements */
+            *, *::before, *::after {
+                color-scheme: dark only !important;
+            }
+            
+            /* Override any browser defaults for form elements */
+            input, button, select, textarea {
+                background-color: var(--bg-secondary) !important;
+                color: var(--text-primary) !important;
+                border: 1px solid var(--border-color) !important;
+            }
+            
+            /* Ensure all text remains visible in dark mode */
+            h1, h2, h3, h4, h5, h6, p, span, div, a {
+                color: inherit;
+            }
+            
+            /* Dark mode media query support */
+            @media (prefers-color-scheme: light) {
+                /* Force dark mode even when system prefers light */
+                html, body {
+                    background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%) !important;
+                    color: var(--text-primary) !important;
+                }
+            }
+            
+            @media (prefers-color-scheme: dark) {
+                /* Enhanced dark mode when system prefers dark */
+                html, body {
+                    background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%) !important;
+                    color: var(--text-primary) !important;
+                }
+            }
+            
+            /* Header */
+            .header {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 100;
+                background: var(--bg-glass);
+                backdrop-filter: blur(10px);
+                border-bottom: 1px solid var(--border-color);
+                padding: 1rem 2rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            
+            .logo {
+                font-size: 1.5rem;
+                font-weight: 800;
+                background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-decoration: none;
+            }
+            
+            .nav-links {
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+            }
+            
+            .nav-link {
+                padding: 0.5rem 1rem;
+                border-radius: var(--radius-md);
+                text-decoration: none;
+                color: var(--text-secondary);
+                font-size: 0.875rem;
+                font-weight: 500;
+                transition: all 0.2s ease;
+                border: 1px solid transparent;
+                -webkit-tap-highlight-color: transparent;
+            }
+            
+            .nav-link:hover,
+            .nav-link:focus {
+                color: var(--text-primary);
+                border-color: var(--border-color);
+                background: var(--bg-secondary);
+            }
+            
+            .nav-link.primary {
+                background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+                color: white;
+                border: none;
+                box-shadow: var(--shadow-glow);
+            }
+            
+            .nav-link.primary:hover,
+            .nav-link.primary:focus {
+                transform: translateY(-1px);
+                box-shadow: var(--shadow-glow), var(--shadow-orange);
+            }
+            
+            /* Mobile Menu */
+            .mobile-menu-btn {
+                display: none;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 2.5rem;
+                height: 2.5rem;
+                background: none;
+                border: none;
+                cursor: pointer;
+                padding: 0;
+                z-index: 1001;
+                position: relative;
+            }
+            
+            .hamburger-line {
+                width: 1.5rem;
+                height: 2px;
+                background: var(--text-primary);
+                transition: all 0.3s ease;
+                margin: 2px 0;
+                border-radius: 2px;
+            }
+            
+            .mobile-menu-btn.active .hamburger-line:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            
+            .mobile-menu-btn.active .hamburger-line:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .mobile-menu-btn.active .hamburger-line:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -6px);
+            }
+            
+            .mobile-sidebar {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background: var(--bg-primary);
+                backdrop-filter: blur(20px);
+                border-left: 1px solid var(--border-color);
+                z-index: 1000;
+                transition: right 0.3s ease;
+                padding: 5rem 2rem 2rem;
+                box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+            }
+            
+            .mobile-sidebar.active {
+                right: 0;
+            }
+            
+            .mobile-nav-links {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .mobile-nav-link {
+                padding: 1rem;
+                border-radius: var(--radius-lg);
+                text-decoration: none;
+                color: var(--text-secondary);
+                font-size: 1rem;
+                font-weight: 500;
+                transition: all 0.2s ease;
+                border: 1px solid var(--border-color);
+                text-align: center;
+                display: block;
+            }
+            
+            .mobile-nav-link:hover,
+            .mobile-nav-link:focus {
+                color: var(--text-primary);
+                background: var(--bg-secondary);
+                border-color: var(--primary-color);
+                box-shadow: var(--shadow-glow);
+            }
+            
+            .mobile-nav-link.primary {
+                background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+                color: white;
+                border: none;
+                box-shadow: var(--shadow-glow);
+                font-weight: 600;
+            }
+            
+            .mobile-nav-link.primary:hover,
+            .mobile-nav-link.primary:focus {
+                transform: translateY(-2px);
+                box-shadow: var(--shadow-lg), var(--shadow-glow), var(--shadow-orange);
+            }
+            
+            .mobile-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                z-index: 999;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+            }
+            
+            .mobile-overlay.active {
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            /* Main container */
+            .main-container {
+                padding-top: 5rem;
+                min-height: 100vh;
+            }
+            
+            /* Hero Section */
+            .hero-section {
+                padding: 4rem 2rem;
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .hero-section::before {
+                content: '';
+                position: absolute;
+                top: -50%;
+                left: -50%;
+                width: 200%;
+                height: 200%;
+                background: radial-gradient(circle, var(--primary-color) 0%, transparent 70%);
+                opacity: 0.1;
+                animation: pulse 4s ease-in-out infinite;
+            }
+            
+            .hero-content {
+                max-width: 4xl;
+                margin: 0 auto;
+                position: relative;
+                z-index: 1;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+                font-weight: 800;
+                margin-bottom: 1rem;
+                background: linear-gradient(135deg, var(--text-primary), var(--primary-light), var(--accent-color));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                line-height: 1.2;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+                color: var(--text-secondary);
+                margin-bottom: 2rem;
+                max-width: 600px;
+                margin-left: auto;
+                margin-right: auto;
+                line-height: 1.6;
+            }
+            
+            .hero-buttons {
+                display: flex;
+                gap: 1rem;
+                justify-content: center;
+                flex-wrap: wrap;
+                margin-bottom: 2rem;
+            }
+            
+            .btn {
+                padding: 0.75rem 1.5rem;
+                border-radius: var(--radius-lg);
+                font-weight: 600;
+                font-size: 0.875rem;
+                text-decoration: none;
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+                transition: all 0.3s ease;
+                border: 1px solid transparent;
+                cursor: pointer;
+                -webkit-tap-highlight-color: transparent;
+                touch-action: manipulation;
+                min-height: 44px;
+                position: relative;
+            }
+            
+            .btn-primary {
+                background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+                color: white;
+                box-shadow: var(--shadow-glow);
+            }
+            
+            .btn-primary:hover,
+            .btn-primary:focus {
+                transform: translateY(-2px);
+                box-shadow: var(--shadow-lg), var(--shadow-glow), var(--shadow-orange);
+            }
+            
+            .btn-secondary {
+                background: var(--bg-secondary);
+                color: var(--text-primary);
+                border-color: var(--border-color);
+            }
+            
+            .btn-secondary:hover,
+            .btn-secondary:focus {
+                background: var(--bg-tertiary);
+                border-color: var(--primary-color);
+                box-shadow: var(--shadow-glow);
+            }
+            
+            /* Stats Section */
+            .stats-section {
+                padding: 2rem;
+                background: var(--bg-secondary);
+                border-top: 1px solid var(--border-color);
+                border-bottom: 1px solid var(--border-color);
+            }
+            
+            .stats-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 2rem;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+            
+            .stat-item {
+                text-align: center;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+                font-weight: 800;
+                background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                display: block;
+            }
+            
+            .stat-label {
+                color: var(--text-secondary);
+                font-size: 0.875rem;
+                margin-top: 0.5rem;
+            }
+            
+            /* Services Section */
+            .services-section {
+                padding: 4rem 2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+                font-weight: 700;
+                text-align: center;
+                margin-bottom: 0.75rem;
+                background: linear-gradient(135deg, var(--text-primary), var(--primary-light));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+            
+            .section-subtitle {
+                color: var(--text-secondary);
+                text-align: center;
+                margin-bottom: 2rem;
+                max-width: 600px;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 0.9rem;
+                line-height: 1.5;
+            }
+            
+            .services-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+                gap: 2rem;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+            
+            .service-card {
+                background: var(--bg-card);
+                border-radius: var(--radius-xl);
+                padding: 1.5rem;
+                border: 1px solid var(--border-color);
+                position: relative;
+                overflow: hidden;
+                transition: all 0.3s ease;
+            }
+            
+            .service-card::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 3px;
+                background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            }
+            
+            .service-card:hover {
+                transform: translateY(-5px);
+                box-shadow: var(--shadow-lg), var(--shadow-glow);
+            }
+            
+            .service-icon {
+                width: 3rem;
+                height: 3rem;
+                background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+                border-radius: var(--radius-lg);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.25rem;
+                margin-bottom: 1rem;
+                box-shadow: var(--shadow-glow);
+            }
+            
+            .service-title {
+                font-size: 1.125rem;
+                font-weight: 600;
+                color: var(--text-primary);
+                margin-bottom: 0.75rem;
+            }
+            
+            .service-description {
+                color: var(--text-secondary);
+                margin-bottom: 1rem;
+                line-height: 1.5;
+                font-size: 0.875rem;
+            }
+            
+            .service-features {
+                list-style: none;
+                margin-bottom: 1.5rem;
+            }
+            
+            .service-features li {
+                color: var(--text-secondary);
+                margin-bottom: 0.5rem;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                font-size: 0.875rem;
+            }
+            
+            .service-features li::before {
+                content: '✓';
+                color: var(--success-color);
+                font-weight: bold;
+            }
+            
+            /* Testimonials Section */
+            .testimonials-section {
+                padding: 4rem 2rem;
+                background: var(--bg-secondary);
+            }
+            
+            .testimonials-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+                gap: 2rem;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+            
+            .testimonial-card {
+                background: var(--bg-card);
+                border-radius: var(--radius-xl);
+                padding: 1.5rem;
+                border: 1px solid var(--border-color);
+                position: relative;
+                transition: all 0.3s ease;
+            }
+            
+            .testimonial-card:hover {
+                transform: translateY(-2px);
+                box-shadow: var(--shadow-lg);
+            }
+            
+            .testimonial-quote {
+                font-size: 0.9rem;
+                line-height: 1.5;
+                color: var(--text-secondary);
+                margin-bottom: 1rem;
+                font-style: italic;
+            }
+            
+            .testimonial-author {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+            }
+            
+            .author-avatar {
+                width: 2.5rem;
+                height: 2.5rem;
+                background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-weight: 600;
+                font-size: 0.875rem;
+            }
+            
+            .author-info h4 {
+                color: var(--text-primary);
+                font-weight: 600;
+                margin-bottom: 0.25rem;
+                font-size: 0.875rem;
+            }
+            
+            .author-info p {
+                color: var(--text-muted);
+                font-size: 0.75rem;
+            }
+            
+            .rating {
+                margin-top: 0.75rem;
+                color: var(--accent-secondary);
+                font-size: 0.875rem;
+            }
+            
+            /* FAQ Section */
+            .faq-section {
+                padding: 4rem 2rem;
+            }
+            
+            .faq-container {
+                max-width: 800px;
+                margin: 0 auto;
+            }
+            
+            .faq-item {
+                background: var(--bg-card);
+                border-radius: var(--radius-lg);
+                margin-bottom: 1rem;
+                border: 1px solid var(--border-color);
+                overflow: hidden;
+            }
+            
+            .faq-question {
+                padding: 1.5rem;
+                cursor: pointer;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-weight: 600;
+                color: var(--text-primary);
+                transition: background 0.2s ease;
+            }
+            
+            .faq-question:hover {
+                background: var(--bg-secondary);
+            }
+            
+            .faq-answer {
+                padding: 0 1.5rem 1.5rem;
+                color: var(--text-secondary);
+                line-height: 1.6;
+                display: none;
+            }
+            
+            .faq-answer.show {
+                display: block;
+            }
+            
+            /* Footer */
+            .footer {
+                background: var(--bg-primary);
+                border-top: 1px solid var(--border-color);
+                padding: 3rem 2rem 2rem;
+                text-align: center;
+            }
+            
+            .footer-content {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+            
+            .footer-links {
+                display: flex;
+                justify-content: center;
+                gap: 2rem;
+                margin-bottom: 2rem;
+                flex-wrap: wrap;
+            }
+            
+            .footer-link {
+                color: var(--text-secondary);
+                text-decoration: none;
+                font-size: 0.875rem;
+                transition: color 0.2s ease;
+            }
+            
+            .footer-link:hover {
+                color: var(--primary-color);
+            }
+            
+            .footer-text {
+                color: var(--text-muted);
+                font-size: 0.875rem;
+            }
+            
+            /* Allow text selection for important content */
+            .selectable-text {
+                -webkit-user-select: text;
+                -moz-user-select: text;
+                -ms-user-select: text;
+                user-select: text;
+                color: inherit !important;
+            }
+            
+            /* Animations */
+            @keyframes pulse {
+                0%, 100% {
+                    opacity: 0.1;
+                }
+                50% {
+                    opacity: 0.2;
+                }
+            }
+            
+            @keyframes float {
+                0%, 100% {
+                    transform: translateY(0px);
+                }
+                50% {
+                    transform: translateY(-10px);
+                }
+            }
+            
+            @keyframes spin {
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+            
+            /* Responsive design */
+            @media (max-width: 768px) {
+                .nav-links {
+                    display: none;
+                }
+                
+                .mobile-menu-btn {
+                    display: flex;
+                }
+                
+                .header {
+                    padding: 1rem 2rem;
+                }
+                
+                .main-container {
+                    padding-top: 5rem;
+                }
+                
+                .hero-title {
+                    font-size: 2rem;
+                }
+                
+                .hero-subtitle {
+                    font-size: 0.9rem;
+                }
+                
+                .hero-buttons {
+                    flex-direction: column;
+                    align-items: center;
+                }
+                
+                .btn {
+                    width: 100%;
+                    max-width: 280px;
+                }
+                
+                .services-grid,
+                .testimonials-grid {
+                    grid-template-columns: 1fr;
+                }
+                
+                .stats-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+                
+                .section-title {
+                    font-size: 1.75rem;
+                }
+            }
+            
+            @media (max-width: 480px) {
+                .hero-section,
+                .services-section,
+                .testimonials-section,
+                .faq-section {
+                    padding: 2rem 1rem;
+                }
+                
+                .hero-title {
+                    font-size: 1.75rem;
+                }
+                
+                .section-title {
+                    font-size: 1.5rem;
+                }
+                
+                .service-card,
+                .testimonial-card {
+                    padding: 1.25rem;
+                }
+                
+                .stats-grid {
+                    grid-template-columns: 1fr;
+                    gap: 1rem;
+                }
+                
+                .stat-number {
+                    font-size: 2rem;
+                }
+                
+                .footer-links {
+                    gap: 1rem;
+                }
+            }
+            
+            /* Prevent zoom methods */
+            * {
+                -webkit-touch-callout: none;
+                -webkit-tap-highlight-color: transparent;
+            }
+            
+            .btn.loading {
+                opacity: 0.7;
+                cursor: not-allowed;
+                pointer-events: none;
+            }
+            
+            .btn.loading::after {
+                content: '';
+                width: 1rem;
+                height: 1rem;
+                border: 2px solid transparent;
+                border-top: 2px solid currentColor;
+                border-radius: 50%;
+                animation: spin 1s linear infinite;
+                margin-left: 0.5rem;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="header">
+            <a href="#" class="logo selectable-text">OSocialCare</a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="nav-links">
+                <a href="/login" class="nav-link">
+                    Sign In
+                </a>
+                <a href="/register" class="nav-link primary">
+                    Get Started
+                </a>
+            </nav>
+            
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </header>
+
+        <!-- Mobile Overlay -->
+        <div class="mobile-overlay" id="mobile-overlay"></div>
+
+        <!-- Mobile Sidebar -->
+        <nav class="mobile-sidebar" id="mobile-sidebar">
+            <div class="mobile-nav-links">
+                <a href="#services" class="mobile-nav-link">Our Services</a>
+                <a href="#testimonials" class="mobile-nav-link">Testimonials</a>
+                <a href="#faq" class="mobile-nav-link">FAQ</a>
+                <a href="/login" class="mobile-nav-link">Sign In</a>
+                <a href="/register" class="mobile-nav-link primary">Get Started</a>
+            </div>
+        </nav>
+
+        <!-- Main Container -->
+        <div class="main-container">
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="hero-content">
+                    <h1 class="hero-title selectable-text">
+                        Boost Your Social Media<br>
+                        Like Never Before
+                    </h1>
+                    <p class="hero-subtitle selectable-text">
+                        Professional SMM services for everyone. Grow your followers, increase engagement, and dominate social media with our proven strategies and authentic growth methods.
+                    </p>
+                    
+                    <div class="hero-buttons">
+                        <a href="#services" class="btn btn-primary" id="get-started-btn">
+                            🚀 Start Growing Now
+                        </a>
+                        <a href="#testimonials" class="btn btn-secondary">
+                            💬 See Success Stories
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services Section -->
+            <section class="services-section" id="services">
+                <h2 class="section-title selectable-text">Our SMM Services</h2>
+                <p class="section-subtitle selectable-text">
+                    Choose from our comprehensive range of social media marketing services designed to boost your online presence across all platforms.
+                </p>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">📈</div>
+                        <h3 class="service-title selectable-text">Instagram Growth</h3>
+                        <p class="service-description selectable-text">
+                            Organic followers, likes, and engagement from real users. Boost your Instagram presence with our proven growth strategies including story views, saves, and authentic interactions.
+                        </p>
+                        <ul class="service-features">
+                            <li class="selectable-text">Real, active followers</li>
+                            <li class="selectable-text">High-quality engagement</li>
+                            <li class="selectable-text">Story views & saves</li>
+                            <li class="selectable-text">24/7 support</li>
+                        </ul>
+                        <a href="/login" class="btn btn-primary">Get Started</a>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">🎵</div>
+                        <h3 class="service-title selectable-text">TikTok Viral Boost</h3>
+                        <p class="service-description selectable-text">
+                            Make your TikTok videos go viral with our engagement packages. Increase views, likes, and followers organically with algorithm optimization.
+                        </p>
+                        <ul class="service-features">
+                            <li class="selectable-text">Viral video promotion</li>
+                            <li class="selectable-text">Targeted audience</li>
+                            <li class="selectable-text">Algorithm optimization</li>
+                            <li class="selectable-text">Analytics reports</li>
+                        </ul>
+                        <a href="/login" class="btn btn-primary">Get Started</a>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">📘</div>
+                        <h3 class="service-title selectable-text">Facebook Marketing</h3>
+                        <p class="service-description selectable-text">
+                            Grow your Facebook page with targeted likes, comments, and shares. Perfect for businesses and personal brands looking to expand reach.
+                        </p>
+                        <ul class="service-features">
+                            <li class="selectable-text">Page likes & follows</li>
+                            <li class="selectable-text">Post engagement</li>
+                            <li class="selectable-text">Video views</li>
+                            <li class="selectable-text">Geo-targeted growth</li>
+                        </ul>
+                        <a href="/register" class="btn btn-primary">Get Started</a>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">🐦</div>
+                        <h3 class="service-title selectable-text">Twitter/X Growth</h3>
+                        <p class="service-description selectable-text">
+                            Build your Twitter presence with real followers, retweets, and engagement from active users in your niche with trend optimization.
+                        </p>
+                        <ul class="service-features">
+                            <li class="selectable-text">Quality followers</li>
+                            <li class="selectable-text">Tweet engagement</li>
+                            <li class="selectable-text">Retweets & likes</li>
+                            <li class="selectable-text">Trend optimization</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Get Started</a>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">📺</div>
+                        <h3 class="service-title selectable-text">YouTube Promotion</h3>
+                        <p class="service-description selectable-text">
+                            Grow your YouTube channel with subscribers, views, and engagement. Boost your video rankings and monetization potential.
+                        </p>
+                        <ul class="service-features">
+                            <li class="selectable-text">Real subscribers</li>
+                            <li class="selectable-text">Video views & watch time</li>
+                            <li class="selectable-text">Likes & comments</li>
+                            <li class="selectable-text">SEO optimization</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Get Started</a>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">💼</div>
+                        <h3 class="service-title selectable-text">LinkedIn Professional</h3>
+                        <p class="service-description selectable-text">
+                            Enhance your professional network with LinkedIn connections, post engagement, and profile optimization for business growth.
+                        </p>
+                        <ul class="service-features">
+                            <li class="selectable-text">Professional connections</li>
+                            <li class="selectable-text">Post likes & comments</li>
+                            <li class="selectable-text">Profile views</li>
+                            <li class="selectable-text">Industry targeting</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Get Started</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Stats Section -->
+            <section class="stats-section">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number selectable-text">50K+</span>
+                        <p class="stat-label selectable-text">Happy Clients</p>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number selectable-text">2M+</span>
+                        <p class="stat-label selectable-text">Followers Generated</p>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number selectable-text">15M+</span>
+                        <p class="stat-label selectable-text">Engagements Delivered</p>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number selectable-text">99%</span>
+                        <p class="stat-label selectable-text">Satisfaction Rate</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials Section -->
+            <section class="testimonials-section" id="testimonials">
+                <h2 class="section-title selectable-text">What Our Clients Say</h2>
+                <p class="section-subtitle selectable-text">
+                    Don't just take our word for it. Here's what thousands of satisfied clients have to say about our SMM services.
+                </p>
+                
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <p class="testimonial-quote selectable-text">
+                            "OSocialCare completely transformed my Instagram presence! I went from 500 followers to 15K in just 3 months. The engagement is real and the growth is organic. Best investment I've made for my business!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">SM</div>
+                            <div class="author-info">
+                                <h4 class="selectable-text">Sarah Martinez</h4>
+                                <p class="selectable-text">Fashion Influencer</p>
+                            </div>
+                        </div>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <p class="testimonial-quote selectable-text">
+                            "My TikTok videos started going viral after using their services. The team understands the algorithm perfectly. I gained 50K followers in 2 months and now I'm getting brand deals!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">MJ</div>
+                            <div class="author-info">
+                                <h4 class="selectable-text">Marcus Johnson</h4>
+                                <p class="selectable-text">Content Creator</p>
+                            </div>
+                        </div>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <p class="testimonial-quote selectable-text">
+                            "As a small business owner, OSocialCare helped me reach customers I never could before. My Facebook page engagement increased by 400% and sales followed. Highly recommend!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">EP</div>
+                            <div class="author-info">
+                                <h4 class="selectable-text">Emily Parker</h4>
+                                <p class="selectable-text">Local Business Owner</p>
+                            </div>
+                        </div>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <p class="testimonial-quote selectable-text">
+                            "Their YouTube promotion service is incredible. My channel went from 100 subscribers to 25K in 6 months. The views are real and the comments are engaging. Worth every penny!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">DL</div>
+                            <div class="author-info">
+                                <h4 class="selectable-text">David Lee</h4>
+                                <p class="selectable-text">YouTuber</p>
+                            </div>
+                        </div>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <p class="testimonial-quote selectable-text">
+                            "Professional and reliable service. My LinkedIn profile now gets 10x more views and I've connected with industry leaders. Great for business networking!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">RW</div>
+                            <div class="author-info">
+                                <h4 class="selectable-text">Rachel Wilson</h4>
+                                <p class="selectable-text">Marketing Manager</p>
+                            </div>
+                        </div>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <p class="testimonial-quote selectable-text">
+                            "I was skeptical at first, but OSocialCare delivered exactly what they promised. My Twitter engagement skyrocketed and I'm now considered an influencer in my niche!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">JC</div>
+                            <div class="author-info">
+                                <h4 class="selectable-text">James Chen</h4>
+                                <p class="selectable-text">Tech Blogger</p>
+                            </div>
+                        </div>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="faq-section" id="faq">
+                <h2 class="section-title selectable-text">Frequently Asked Questions</h2>
+                <p class="section-subtitle selectable-text">
+                    Got questions? We've got answers. Here are the most common questions about our SMM services.
+                </p>
+                
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span class="selectable-text">Are your followers and engagement real?</span>
+                            <span>+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="selectable-text">
+                                Yes! We only provide real, active followers and engagement from genuine users. We never use bots or fake accounts. All our growth is organic and complies with platform guidelines.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span class="selectable-text">How quickly will I see results?</span>
+                            <span>+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="selectable-text">
+                                Results typically start showing within 24-48 hours of starting your campaign. Full results depend on your package, but most clients see significant growth within the first week.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span class="selectable-text">Is it safe for my account?</span>
+                            <span>+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="selectable-text">
+                                Absolutely! Our methods are 100% safe and compliant with all social media platform terms of service. We've been in business for 5+ years with zero account suspensions.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span class="selectable-text">Can I cancel anytime?</span>
+                            <span>+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="selectable-text">
+                                Yes, you can cancel your subscription at any time. There are no long-term contracts or cancellation fees. However, we're confident you'll love the results!
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span class="selectable-text">Do you offer custom packages?</span>
+                            <span>+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="selectable-text">
+                                Yes! We offer custom packages for businesses and influencers with specific needs. Contact our team to discuss your requirements and get a personalized quote.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span class="selectable-text">What payment methods do you accept?</span>
+                            <span>+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="selectable-text">
+                                We accept all major credit cards, PayPal, and cryptocurrency payments. All transactions are secure and encrypted for your protection.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Why Choose Us Section -->
+            <section class="services-section">
+                <h2 class="section-title selectable-text">Why Choose OSocialCare?</h2>
+                <p class="section-subtitle selectable-text">
+                    We're not just another SMM service. Here's what makes us the #1 choice for social media growth.
+                </p>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">🛡️</div>
+                        <h3 class="service-title selectable-text">100% Safe & Secure</h3>
+                        <p class="service-description selectable-text">
+                            All our methods are platform-compliant and your account security is our top priority. No risks, just results.
+                        </p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">⚡</div>
+                        <h3 class="service-title selectable-text">Lightning Fast Delivery</h3>
+                        <p class="service-description selectable-text">
+                            See results within hours, not weeks. Our advanced systems ensure quick and efficient delivery of all services.
+                        </p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">💎</div>
+                        <h3 class="service-title selectable-text">Premium Quality</h3>
+                        <p class="service-description selectable-text">
+                            Only high-quality, engaged users interact with your content. No fake accounts or bots, just real people.
+                        </p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">🏆</div>
+                        <h3 class="service-title selectable-text">Money-Back Guarantee</h3>
+                        <p class="service-description selectable-text">
+                            Not satisfied? Get your money back, no questions asked. We're that confident in our service quality.
+                        </p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">📞</div>
+                        <h3 class="service-title selectable-text">24/7 Support</h3>
+                        <p class="service-description selectable-text">
+                            Our expert support team is available around the clock to help you with any questions or concerns.
+                        </p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">📊</div>
+                        <h3 class="service-title selectable-text">Detailed Analytics</h3>
+                        <p class="service-description selectable-text">
+                            Track your growth with comprehensive reports and analytics. See exactly how your investment is paying off.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="hero-section">
+                <div class="hero-content">
+                    <h2 class="hero-title selectable-text" style="font-size: 2.5rem;">
+                        Ready to Dominate<br>
+                        Social Media?
+                    </h2>
+                    <p class="hero-subtitle selectable-text">
+                        Join thousands of satisfied clients who have transformed their social media presence with OSocialCare. Start your growth journey today!
+                    </p>
+                    
+                    <div class="hero-buttons">
+                        <a href="#" class="btn btn-primary" id="final-cta-btn">
+                            🚀 Start Your Growth Journey
+                        </a>
+                        <a href="#" class="btn btn-secondary">
+                            💬 Contact Our Team
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="#" class="footer-link">Privacy Policy</a>
+                    <a href="#" class="footer-link">Terms of Service</a>
+                    <a href="#" class="footer-link">Refund Policy</a>
+                    <a href="#" class="footer-link">Contact Support</a>
+                    <a href="#" class="footer-link">About Us</a>
+                    <a href="#" class="footer-link">Blog</a>
+                </div>
+                <p class="footer-text selectable-text">
+                    © 2024 OSocialCare. All rights reserved. Built with Laravel for maximum performance and reliability.
+                </p>
+            </div>
+        </footer>
+
+        <script>
+            /**
+             * SMM Services Platform Interactions
+             * 
+             * Features:
+             * - Zoom prevention
+             * - FAQ toggles
+             * - Smooth scrolling
+             * - Loading states
+             * - Interactive animations
+             */
+            
+            document.addEventListener('DOMContentLoaded', function() {
+                // Mobile menu functionality
+                const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+                const mobileSidebar = document.getElementById('mobile-sidebar');
+                const mobileOverlay = document.getElementById('mobile-overlay');
+                
+                function toggleMobileMenu() {
+                    mobileMenuBtn.classList.toggle('active');
+                    mobileSidebar.classList.toggle('active');
+                    mobileOverlay.classList.toggle('active');
+                    document.body.style.overflow = mobileSidebar.classList.contains('active') ? 'hidden' : '';
+                }
+                
+                function closeMobileMenu() {
+                    mobileMenuBtn.classList.remove('active');
+                    mobileSidebar.classList.remove('active');
+                    mobileOverlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+                
+                mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+                mobileOverlay.addEventListener('click', closeMobileMenu);
+                
+                // Close mobile menu when clicking on nav links
+                document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                    link.addEventListener('click', closeMobileMenu);
+                });
+                
+                // Prevent zoom on iOS double-tap
+                let lastTouchEnd = 0;
+                document.addEventListener('touchend', function (event) {
+                    const now = (new Date()).getTime();
+                    if (now - lastTouchEnd <= 300) {
+                        event.preventDefault();
+                    }
+                    lastTouchEnd = now;
+                }, false);
+                
+                // Prevent pinch-to-zoom
+                document.addEventListener('gesturestart', function (e) {
+                    e.preventDefault();
+                });
+                
+                document.addEventListener('gesturechange', function (e) {
+                    e.preventDefault();
+                });
+                
+                document.addEventListener('gestureend', function (e) {
+                    e.preventDefault();
+                });
+                
+                // Prevent wheel zoom
+                document.addEventListener('wheel', function(e) {
+                    if (e.ctrlKey) {
+                        e.preventDefault();
+                    }
+                }, { passive: false });
+                
+                // Prevent keyboard zoom
+                document.addEventListener('keydown', function(e) {
+                    if ((e.ctrlKey || e.metaKey) && (e.keyCode === 61 || e.keyCode === 107 || e.keyCode === 173 || e.keyCode === 109 || e.keyCode === 187 || e.keyCode === 189)) {
+                        e.preventDefault();
+                    }
+                });
+                
+                // Handle CTA button loading states
+                const ctaButtons = document.querySelectorAll('#get-started-btn, #final-cta-btn');
+                ctaButtons.forEach(btn => {
+                    btn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        this.classList.add('loading');
+                        const originalText = this.innerHTML;
+                        this.innerHTML = '🚀 Loading...';
+                        
+                        // Simulate loading
+                        setTimeout(() => {
+                            this.classList.remove('loading');
+                            this.innerHTML = originalText;
+                        }, 2000);
+                    });
+                });
+                
+                // Service card hover effects
+                const serviceCards = document.querySelectorAll('.service-card');
+                serviceCards.forEach(card => {
+                    card.addEventListener('mouseenter', function() {
+                        this.style.transform = 'translateY(-8px)';
+                    });
+                    
+                    card.addEventListener('mouseleave', function() {
+                        this.style.transform = 'translateY(0)';
+                    });
+                });
+                
+                // Testimonial card animations
+                const testimonialCards = document.querySelectorAll('.testimonial-card');
+                testimonialCards.forEach((card, index) => {
+                    card.style.animationDelay = `${index * 0.1}s`;
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(20px)';
+                    
+                    setTimeout(() => {
+                        card.style.transition = 'all 0.6s ease';
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, index * 100);
+                });
+                
+                // Smooth scrolling for anchor links
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const target = document.querySelector(this.getAttribute('href'));
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
+                    });
+                });
+            });
+            
+            // FAQ Toggle Function
+            function toggleFaq(element) {
+                const answer = element.nextElementSibling;
+                const icon = element.querySelector('span:last-child');
+                
+                if (answer.classList.contains('show')) {
+                    answer.classList.remove('show');
+                    icon.textContent = '+';
+                    element.style.backgroundColor = '';
+                } else {
+                    // Close all other FAQs
+                    document.querySelectorAll('.faq-answer.show').forEach(openAnswer => {
+                        openAnswer.classList.remove('show');
+                        openAnswer.previousElementSibling.querySelector('span:last-child').textContent = '+';
+                        openAnswer.previousElementSibling.style.backgroundColor = '';
+                    });
+                    
+                    // Open this FAQ
+                    answer.classList.add('show');
+                    icon.textContent = '−';
+                    element.style.backgroundColor = 'var(--bg-secondary)';
+                }
+            }
+        </script>
+        <div class="fixed bottom-2 pb-28 left-6 flex flex-col items-center space-y- z-50">
+            <!-- WhatsApp Button -->
+            <a href="#" target="_blank" rel="noopener noreferrer"
+                class="bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg transition duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="white" viewBox="0 0 24 24">
+                    <path d="M20.52 3.48A11.86 11.86 0 0012 0a11.94 11.94 0 00-10.38 6.13 11.81 11.81 0 00-1.1 4.94 11.94 11.94 0 001.65 6L0 24l6.25-2.05a11.86 11.86 0 0011.53-1.48 12 12 0 002.74-2.74 11.91 11.91 0 000-16.95zM12 22a9.94 9.94 0 01-5.09-1.4l-.36-.22-3.71 1.22 1.22-3.61-.23-.37A10 10 0 1112 22zm5.4-7.6c-.3-.15-1.76-.86-2.04-.96s-.48-.15-.69.15-.79.96-.96 1.16-.36.23-.66.08a8.3 8.3 0 01-2.44-1.5 9.3 9.3 0 01-1.72-2.12c-.18-.3 0-.46.13-.61.13-.14.3-.36.45-.54s.23-.3.3-.51a.59.59 0 000-.57c-.07-.15-.69-1.65-.96-2.27s-.51-.51-.69-.51-.38 0-.58 0a1.13 1.13 0 00-.82.38 3.42 3.42 0 00-1 2.54A6.5 6.5 0 009.07 14a11.6 11.6 0 005.37 1.5c.39 0 .78-.02 1.17-.05.36-.03 1.1-.43 1.26-.85s.16-1.03.08-1.12-.27-.19-.57-.34z"/>
+                </svg>
+            </a>
+
+            <!-- Telegram Button -->
+            <!--<a href="#" target="_blank" rel="noopener noreferrer"-->
+            <!--   class="bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-full shadow-lg transition duration-300">-->
+            <!--    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="white" viewBox="0 0 24 24">-->
+            <!--        <path d="M9.042 16.555l-.389 3.875c.557 0 .798-.238 1.09-.524l2.614-2.497 5.416 3.943c.993.547 1.702.26 1.958-.921l3.546-16.652c.314-1.464-.518-2.032-1.486-1.677L1.99 10.062c-1.45.567-1.432 1.368-.252 1.736l5.667 1.77 13.127-8.27c.617-.375 1.177-.167.717.208l-10.05 9.11z"/>-->
+            <!--    </svg>-->
+            <!--</a>-->
+        </div>
+    </body>
+</html>

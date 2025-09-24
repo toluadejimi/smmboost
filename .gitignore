@@ -1,0 +1,10 @@
+.env
+.idea
+vendor
+modules_statuses.json
+/storage/logs
+/assets/upload
+
+# Project exclude paths
+/storage/app/
+/storage/framework/
