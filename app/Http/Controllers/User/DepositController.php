@@ -244,6 +244,7 @@ class DepositController extends Controller
                $user = User::where('email', $request->email)->first();
                $ttr =new Transaction();
                $ttr ->transactional_type = "App\Models\Deposit";
+               $ttr ->transactional_id = $user->id;
                $ttr ->user_id = $user->id;
                $ttr ->amount = $request->amount;
                $ttr ->balance = $user->balance + $request->amount;
