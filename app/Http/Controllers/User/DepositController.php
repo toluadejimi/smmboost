@@ -249,6 +249,7 @@ class DepositController extends Controller
                $ttr ->amount = $request->amount;
                $ttr ->balance = $user->balance + $request->amount;
                $ttr ->charge = 0;
+               $ttr ->status = 1;
                $ttr ->trx_type = "+";
                $ttr ->remarks = "Sprintpay Deposit successful";
                $ttr ->save();
