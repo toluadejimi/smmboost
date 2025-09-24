@@ -23,7 +23,7 @@
 {{--                    </button>--}}
                     <button @click="tab = 'other'" class="flex-1 tab-button text-sm py-2 rounded-xl transition"
                         :class="tab === 'other' ? 'active bg-orange-500 text-white' : 'text-slate-300'">
-                        Other Payments
+                        Instant Payments
                     </button>
                 </div>
 
