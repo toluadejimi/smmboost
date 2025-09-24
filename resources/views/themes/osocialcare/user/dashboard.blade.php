@@ -150,7 +150,7 @@
                                 </td>
                                 <td class="p-2">
                                     @php
-                                        $status = $transaction->status;
+                                        $status = (int)$transaction->status;
                                         $statusText = match ($status) {
                                             0 => 'Pending',
                                             1 => 'Success',
