@@ -90,7 +90,7 @@
                                 required="">
                             <div class="error-message" id="amount-error"></div>
                         </div>
-                        <div id="currency-section">
+                        <div style="display: none" id="currency-section">
                             <label class="text-white text-sm">Supported Currency</label>
                             <select name="supported_currency" id="supported_currency"
                                 class="w-full rounded-lg bg-gray-700 text-gray-100 border border-gray-600 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none p-3 text-xs transition-all duration-200">
