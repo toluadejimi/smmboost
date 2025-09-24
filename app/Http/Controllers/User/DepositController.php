@@ -235,8 +235,7 @@ class DepositController extends Controller
 
        $trx = Deposit::where('trx_id', $request->order_id)->first();
        if($trx){
-
-           if($trx->status === 0){
+           if((int)$trx->status === 0){
 
                Deposit::where('trx_id', $request->order_id)->update([
                    'status' => 1,
